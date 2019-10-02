@@ -9,6 +9,9 @@ export class MainComponent implements OnInit {
 
   constructor() { }
 
+  logout() {
+    localStorage.removeItem('token');
+  }
   ngOnInit() {
   }
 
