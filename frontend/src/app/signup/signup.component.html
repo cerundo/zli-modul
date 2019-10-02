@@ -1,0 +1,12 @@
+<div class="signup-container">
+  <div class="username">
+    <p>Username:</p>
+    <input placeholder="username" #box (blur)="user(box.value)">
+  </div>
+  <div class="password">
+    <p>Password:</p>
+    <input placeholder="password" #box2 type="password" (blur)="pw(box2.value)">
+  </div>
+  <br>
+  <button (click)="registerUser(username, password)">Submit</button>
+</div>

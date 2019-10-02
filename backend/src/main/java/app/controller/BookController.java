@@ -20,7 +20,7 @@ public class BookController {
 
     @DeleteMapping("{id}")
     @ResponseStatus(HttpStatus.OK)
-    public Book deleteBook(@Valid @RequestHeader int id) {
+    public Book deleteBook(@Valid @RequestHeader Long id) {
         return null;
     }
 

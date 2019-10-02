@@ -11,7 +11,7 @@ public class BookService {
             return bookRepository.saveAndFlush(book);
     }
 
-    public void deleteBook(int id) {
+    public void deleteBook(Long id) {
         if(bookRepository.existsById(id)) {
             bookRepository.deleteById(id);
         }

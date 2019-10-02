@@ -1,5 +1,8 @@
 package app.domain;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+
 import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -7,20 +10,41 @@ import java.util.List;
 @Entity
 public class User {
 
+    public User() {
+
+    }
+
+    public User(String password, String username) {
+        this.username = username;
+        this.password = password;
+    }
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private Long id;
 
     @OneToMany(mappedBy = "user")
     private List<Library> libraryList;
 
+    @Column(nullable = false, unique = true)
     private String username;
 
-    public int getId() {
+    @Column(nullable = false)
+    private String password;
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+
+    public Long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Long id) {
         this.id = id;
     }
 

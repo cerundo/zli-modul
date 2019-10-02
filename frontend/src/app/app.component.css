@@ -1,0 +1,21 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+.header {
+  background-color: #1a1a1a;
+  font-size: 50px;
+  text-align: center;
+  color: whitesmoke;
+}
+.footer {
+  font-size: 50px;
+  text-align: center;
+  color: whitesmoke;
+  background-color: #1a1a1a;
+}
+.content {
+  flex-grow: 1;
+  background-color: whitesmoke;
+}
